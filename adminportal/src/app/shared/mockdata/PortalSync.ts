@@ -1,4 +1,4 @@
-import { PortalSync } from '../interfaces/responses/PortalSync';
+
 
 export const MockPortalSync: PortalSync = {
     userProfile: {
