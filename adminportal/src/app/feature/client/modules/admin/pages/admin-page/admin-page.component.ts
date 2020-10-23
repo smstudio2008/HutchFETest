@@ -1,7 +1,10 @@
+import { getUser } from './../../store/selector/user.selector';
+import { IPortalSync } from './../../interfaces/responses/PortalSync';
 import * as userActions from './../../store/actions/user.actions';
 import { Component, OnInit } from '@angular/core';
-import { Store } from '@ngrx/store';
+import { select, Store } from '@ngrx/store';
 import { IAppUserState } from '../../store/interfaces/app.user-state';
+import { Observable } from 'rxjs';
 
 @Component({
     selector: 'app-admin-page',
@@ -10,6 +13,10 @@ import { IAppUserState } from '../../store/interfaces/app.user-state';
 })
 export class AdminPageComponent implements OnInit {
     constructor(private store: Store<IAppUserState>) {}
+
+    public userData: Observable<IPortalSync[]> = this.store.pipe(
+        select(getUser)
+    );
 
     ngOnInit(): void {
         this.getUserDatafromStore();
