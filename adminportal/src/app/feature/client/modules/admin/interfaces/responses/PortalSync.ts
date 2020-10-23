@@ -13,7 +13,7 @@ import { UserResource } from '../models/UserResource';
 import { FusionCredits } from '../models/FusionCredits';
 import { UserAds } from '../models/UserAds';
 
-export interface PortalSync {
+export interface IPortalSync {
     userProfile: UserAppProfile;
     userIAPReceipts: UserIAPReceipt[];
     userOfferReceipts: UserOfferReceipt[];
