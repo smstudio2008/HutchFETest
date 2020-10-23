@@ -10,7 +10,7 @@ import { IPortalSync } from '../interfaces/responses/PortalSync';
 })
 export class PortalSyncService {
     private readonly USER_URL: string =
-        'https://run.mocky.io/v3/6a693531-8771-4adc-a69f-1cf66b84528c';
+        'https://run.mocky.io/v3/1978a54c-6cf2-4386-b2ae-59399e7753a8';
 
     constructor(private http: HttpClient) {}
 
