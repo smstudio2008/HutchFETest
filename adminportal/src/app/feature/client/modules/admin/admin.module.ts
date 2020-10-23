@@ -5,7 +5,7 @@ import { SharedModule } from './../../../../shared/shared.module';
 import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 import { AdminRoutingModule } from './routes/admin.routing.module';
 
-import { UserTableComponent } from './components/user-table/user-table.component';
+
 
 import { EffectsModule } from '@ngrx/effects';
 import { StoreModule } from '@ngrx/store';
@@ -44,7 +44,6 @@ import { UserTiersComponent } from './components/user-tiers/user-tiers.component
         UserOfferReceiptsComponent,
         UserProfileComponent,
         UserResourcesComponent,
-        UserTableComponent,
         UserTiersComponent,
     ],
     imports: [

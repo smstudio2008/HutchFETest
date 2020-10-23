@@ -1,76 +1,13 @@
 <nav class="col-md-2 d-none d-md-block bg-light sidebar">
     <div class="sidebar-sticky">
-        <ul class="nav flex-column">
 
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    User Profile
-                </a>
-            </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    User Offer Receipts
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    User IAP Receipts
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Social Accounts
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Log Entries
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Ads
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Daily Gift
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Ftue Progress
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Fuel
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    User Cars
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    User Augments
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    User Tiers
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    User Resources
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">
-                    Fusion Credits
+
+        <ul *ngFor="let item of menuValues" class="nav flex-column">
+
+            <li class="nav-item"  >
+                <a class="nav-link" [routerLink]="item.url"  >
+                    {{item.name}}
                 </a>
             </li>
         </ul>
