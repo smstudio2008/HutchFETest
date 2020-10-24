@@ -76,7 +76,7 @@ const routes: Routes = [
             {
                 path: 'user-tier',
                 component:  UserTiersComponent,
-            },
+            }
         ],
     },
 ];

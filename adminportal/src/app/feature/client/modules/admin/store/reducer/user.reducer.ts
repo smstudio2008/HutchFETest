@@ -2,7 +2,7 @@ import { UserActions, UserActionTypes } from '../actions/user.actions';
 import { IUserState } from '../interfaces/user-state';
 
 export const initialState: IUserState  = {
-    user: []
+    user: null
 };
 
 export function userReducer( state = initialState, action: UserActions): any {

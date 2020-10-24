@@ -14,9 +14,7 @@ import { Observable } from 'rxjs';
 export class AdminPageComponent implements OnInit {
     constructor(private store: Store<IAppUserState>) {}
 
-    public userData: Observable<IPortalSync[]> = this.store.pipe(
-        select(getUser)
-    );
+
 
     ngOnInit(): void {
         this.getUserDatafromStore();

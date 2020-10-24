@@ -5,13 +5,15 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 /* Imports - NGRX State Managment */
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './core/state/app.reducer';
+import { AuthInterceptor } from './core/interceptor/token/token.interceptor';
+import { ErrorInterceptor } from './core/interceptor/error/error.interceptor';
 
 @NgModule({
     declarations: [AppComponent],
@@ -20,16 +22,25 @@ import { reducers, metaReducers } from './core/state/app.reducer';
         FormsModule,
         HttpClientModule,
         AppRoutingModule,
-        StoreModule.forRoot(reducers, {
-            metaReducers,
-        }),
+        StoreModule.forRoot(reducers),
         StoreDevtoolsModule.instrument({
             maxAge: 25,
             logOnly: environment.production,
         }),
         EffectsModule.forRoot([]),
     ],
-    providers: [],
+    providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: AuthInterceptor,
+            multi: true,
+        },
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: ErrorInterceptor,
+            multi: true,
+        },
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

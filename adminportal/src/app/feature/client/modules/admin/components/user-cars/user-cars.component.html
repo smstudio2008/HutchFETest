@@ -1,1 +1,16 @@
-<p>user-cars works!</p>
+<section class="pt-3">
+    <h2>User Cars</h2>
+    <div class="d-flex flex-wrap justify-content-center">
+        <ng-container *ngIf="userCarData | async; let cars">
+            <ng-container *ngFor="let item of cars.userCars ; let i=index">
+                <div class="card m-3 bg-light">
+                    <div class="card-body">
+                        <p class="text-dark"> <strong>Car Id :</strong> {{item.carId}}</p>
+                        <p class="text-success"> <strong>Garage Slot :</strong> {{item.garageSlot}}</p>
+                        <p class="text-danger"> <strong>Fusion Locked :</strong> {{item.fusionLocked}}</p>
+                    </div>
+                </div>
+            </ng-container>
+        </ng-container>
+    </div>
+</section>

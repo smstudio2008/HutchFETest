@@ -9,7 +9,7 @@ export const reducers: ActionReducerMap<State> = {
 };
 
 export function localStorageSyncReducer(reducer: ActionReducer<any>): ActionReducer<any> {
-  return localStorageSync({ keys: ['user'], rehydrate: true, })(reducer);
+  return localStorageSync({ keys: ['user'] })(reducer);
 }
 
-export const metaReducers: MetaReducer<any>[] = [localStorageSyncReducer]
+export const metaReducers: MetaReducer<any>[] = [localStorageSyncReducer];
