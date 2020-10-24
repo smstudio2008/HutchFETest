@@ -76,7 +76,8 @@ const routes: Routes = [
             {
                 path: 'user-tier',
                 component:  UserTiersComponent,
-            }
+            },
+            { path: '', redirectTo: 'user-cars', pathMatch: 'full' },
         ],
     },
 ];

@@ -1,27 +1,36 @@
-# Adminportal
+# HUTCH DEMO PROJECT
+ ### SSM STUDIO
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.0.
 
-## Development server
+![Angular9](https://img.shields.io/badge/Angular-9-brightgreen)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Build Tools used    
+✅ Angular 9+   
+✅ Boostrap  
+✅ NGRX State management Library
+✅ NGRX Local Storage
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Install / Development
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```bash
 
-## Running unit tests
+# Install dependencies
+$ npm install
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+# Start server
+$ npm run start
 
-## Running end-to-end tests
+# Open in browser: http://localhost:4200
+```
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+## Commands
+- `npm run start`             - start the app
+- `npm run test`              - run unit tests
+- `npm run build`             - build the project
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+
+

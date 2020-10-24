@@ -22,7 +22,9 @@ import { ErrorInterceptor } from './core/interceptor/error/error.interceptor';
         FormsModule,
         HttpClientModule,
         AppRoutingModule,
-        StoreModule.forRoot(reducers),
+        StoreModule.forRoot(reducers, {
+            metaReducers
+          }),
         StoreDevtoolsModule.instrument({
             maxAge: 25,
             logOnly: environment.production,
