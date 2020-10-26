@@ -12,6 +12,8 @@ export class LoginComponent {
         const userDetail = btoa(JSON.stringify(data));
 
         localStorage.setItem('user-token', userDetail);
+        localStorage.setItem('app-version', '1.3');
+        localStorage.setItem('data-version', '1.2');
 
         this.router.navigateByUrl('/admin');
     }
